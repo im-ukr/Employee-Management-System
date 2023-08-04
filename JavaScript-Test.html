@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Job Application Management System</title>
+  </head>
+  <body>
+    <script>
+      // Get all data
+fetch('http://127.0.0.1:5000/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+// Get data by ID
+fetch('http://127.0.0.1:5000/data/7369')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+// Add new data
+fetch('http://127.0.0.1:5000/data', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    id: 7372,
+    emp_name: 'Doe',
+    age: 30,
+    gender: 'M',
+    email_id: 'doe3@abc.in'
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+// Update data by ID
+fetch('http://127.0.0.1:5000/data/7369', {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    emp_name: 'Smith Jr.',
+    age: 35,
+    gender: 'F',
+    email_id: 'smithjr@abc.in'
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+// Delete data by ID
+fetch('http://127.0.0.1:5000/data/7369', {
+  method: 'DELETE'
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+    </script>
+  </body>
+</html>
