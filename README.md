@@ -1,6 +1,6 @@
 # Employee-Management-System
 
-This project is a simple job application management system implemented using Flask, a web framework for Python. The goal of this system is to provide basic CRUD (Create, Read, Update, Delete) functionality for managing employee data. Here's a detailed breakdown:
+Employee Management system implemented using Flask, a web framework for Python. The goal of this system is to provide basic CRUD (Create, Read, Update, Delete) functionality for managing employee data. Here's a detailed breakdown:
 
 Flask Setup: The Flask app is created with two main routes (/data and /data/<int:id>) for handling GET requests to retrieve all employees and a specific employee by ID, respectively. Additional routes are defined for adding, updating, and deleting employees.
 CORS Support: The project uses the flask_cors extension to enable Cross-Origin Resource Sharing (CORS), allowing the API to be accessed from a frontend application running on a different domain.
